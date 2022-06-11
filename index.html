@@ -1,295 +1,421 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Buque al toque</title>
-    <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <!-- Bootstrap icons-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Buque Al Toque-Home</title>
+
+    <!-- load stylesheets -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">  <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">                <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">                                      <!-- Bootstrap style -->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="css/datepicker.css"/>
+    <link rel="stylesheet" href="css/tooplate-style.css">                                   <!-- Templatemo style -->
+    <link rel="shortcut icon" href="img/logo.png">
 </head>
 
-<body>
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="#!">Buque al toque</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <form class="d-flex">
-                    <div id="botonCarrito">
-                        <button class="btn btn-outline-dark" type="submit">
-                            <i class="bi-cart-fill me-1"></i>
-                            Carrito
-                            <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-                        </button>
+    <body>
+        <div class="tm-main-content" id="top">
+            <div class="tm-top-bar-bg"></div>
+            <div class="tm-top-bar" id="tm-top-bar">
+                <!-- Top Navbar -->
+                <div class="container">
+                    <div class="row">
+                        
+                        <nav class="navbar navbar-expand-lg narbar-light">
+                            <a class="navbar-brand mr-auto" href="#">
+                                <img src="img/logo.png" alt="Site logo">
+                                Buque Al Toque
+                            </a>
+                            <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div id="mainNav" class="collapse navbar-collapse tm-bg-white">
+                                <ul class="navbar-nav ml-auto">
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="#top">Home <span class="sr-only">(current)</span></a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="#sec-subs">Subscripcion</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="#sec-travel">Viajes</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="#sec-contact">Contactanos</a>
+                                  </li>
+                                </ul>
+                            </div>                            
+                        </nav>            
                     </div>
-                </form>
+                </div>
             </div>
-        </div>
-    </nav>
-    <!-- Header-->
-    <header class="bg-dark py-5">
-        <div class="container px-4 px-lg-5 my-5">
-            <div class="text-center text-white">
-                <h1 class="display-4 fw-bolder">Elige tu viaje</h1>
-                <p class="lead fw-normal text-white-50 mb-0">SLOGAN</p>
+            <div class="tm-section tm-bg-img" id="tm-section-1">
+                <div class="tm-bg-white ie-container-width-fix-2">
+                    <div class="container ie-h-align-center-fix">
+                        <div class="row">
+                            <div class="col-xs-12 ml-auto mr-auto ie-container-width-fix">
+                                <form action="index.html" method="get" class="tm-search-form tm-section-pad-2">
+                                    <div class="form-row tm-search-form-row">
+                                        <div class="form-group tm-form-element tm-form-element-100">
+                                            <i class="fa fa-map-marker fa-2x tm-form-element-icon"></i>
+                                            <select name="adult" class="form-control tm-select" id="adult">
+                                                <option value="">Seleccione su destino</option>
+                                                <option value="1">Buenos Aires</option>
+                                                <option value="2">Uruguay</option>
+                                            </select>
+                                            </div>
+                                        <div class="form-group tm-form-element tm-form-element-50">
+                                            <i class="fa fa-calendar fa-2x tm-form-element-icon"></i>
+                                            <input name="check-in" type="text" class="form-control" id="inputCheckIn" placeholder="Check In">
+                                        </div>
+                                        <div class="form-group tm-form-element tm-form-element-50">
+                                            <i class="fa fa-calendar fa-2x tm-form-element-icon"></i>
+                                            <input name="check-out" type="text" class="form-control" id="inputCheckOut" placeholder="Check Out">
+                                        </div>
+                                    </div>
+                                    <div class="form-row tm-search-form-row">
+                                        <div class="form-group tm-form-element tm-form-element-2">                                            
+                                            <select name="adult" class="form-control tm-select" id="adult">
+                                                <option value="">Adulto</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                            </select>
+                                            <i class="fa fa-2x fa-user tm-form-element-icon"></i>
+                                        </div>
+                                        <div class="form-group tm-form-element tm-form-element-2">                                            
+                                            <select name="children" class="form-control tm-select" id="children">
+                                                <option value="">Chicos</option>
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                            </select>
+                                            <i class="fa fa-user tm-form-element-icon tm-form-element-icon-small"></i>
+                                        </div>
+                                        <div class="form-group tm-form-element tm-form-element-2">
+                                            
+                                        </div>
+                                        <div class="form-group tm-form-element tm-form-element-2">
+                                            <button type="submit" class="btn btn-primary tm-btn-search">Chequear Disponibilidad</button>
+                                        </div>
+                                      </div>
+                                      <div class="form-row clearfix pl-2 pr-2 tm-fx-col-xs">
+                                          
+                                          <a href="#" class="ie-10-ml-auto ml-auto mt-1 tm-font-semibold tm-color-primary">Necesitas Ayuda?</a>
+                                      </div>
+                                </form>
+                            </div>                        
+                        </div>      
+                    </div>
+                </div>                  
             </div>
-        </div>
-    </header>
-    <div class="container-fluid" style="background-color: rgb(255, 51, 0);">
-        hola
-    </div>
-    
-    <!-- Section-->
-    <section class="py-5">
-        <div class="container px-4 px-lg-5 mt-5">
-            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Product image-->
-                        <img class="card-img-top" src="img/img1.jpg" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">Colonia, Uruguay</h5>
-                                <!-- Product price-->
-                                $40.00 - $80.00
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center">
-                                <a class="btn btn-outline-dark mt-auto" href="#">Reservar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Sale badge-->
-                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
-                            Agotado
-                        </div>
-                        <!-- Product image-->
-                        <img class="card-img-top" src="img/img2.jpg" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">Punta del Este,UR</h5>
-                                <!-- Product reviews-->
-                                <div class="d-flex justify-content-center small text-warning mb-2">
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                </div>
-                                <!-- Product price-->
-                                <span class="text-muted text-decoration-line-through">$20.00</span>
-                                $18.00
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center">
-                                <a class="btn btn-outline-dark mt-auto" href="#">Reservar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Sale badge-->
-                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
-                            Agotado
-                        </div>
-                        <!-- Product image-->
-                        <img class="card-img-top" src="img/img3.jpg" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">Montevideo, UR</h5>
-                                <!-- Product price-->
-                                <span class="text-muted text-decoration-line-through">$50.00</span>
-                                $25.00
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center">
-                                <a class="btn btn-outline-dark mt-auto" href="#">Reservar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Product image-->
-                        <img class="card-img-top" src="img/img4.jpeg" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">Montevideo, UR</h5>
-                                <!-- Product reviews-->
-                                <div class="d-flex justify-content-center small text-warning mb-2">
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                </div>
-                                <!-- Product price-->
-                                $40.00
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center">
-                                <a class="btn btn-outline-dark mt-auto" href="#">Reservar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Sale badge-->
-                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
-                            Agotado
-                        </div>
-                        <!-- Product image-->
-                        <img class="card-img-top" src="img/img5.jpeg" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">Congreso, BS AS</h5>
-                                <!-- Product price-->
-                                <span class="text-muted text-decoration-line-through">$50.00</span>
-                                $25.00
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center">
-                                <a class="btn btn-outline-dark mt-auto" href="#">Reservar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Product image-->
-                        <img class="card-img-top" src="img/img6.jpg" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">La Boca,BS AS</h5>
-                                <!-- Product price-->
-                                $120.00 - $280.00
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center">
-                                <a class="btn btn-outline-dark mt-auto" href="#">Reservar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Sale badge-->
-                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
-                            Agotado
-                        </div>
-                        <!-- Product image-->
-                        <img class="card-img-top" src="img/img7.jpg" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">BS AS, ARG</h5>
-                                <!-- Product reviews-->
-                                <div class="d-flex justify-content-center small text-warning mb-2">
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                </div>
-                                <!-- Product price-->
-                                <span class="text-muted text-decoration-line-through">$20.00</span>
-                                $18.00
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center">
-                                <a class="btn btn-outline-dark mt-auto" href="#">Reservar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Product image-->
-                        <img class="card-img-top" src="img/img8.jpg" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">Puerto Madero, ARG</h5>
-                                <!-- Product reviews-->
-                                <div class="d-flex justify-content-center small text-warning mb-2">
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                </div>
-                                <!-- Product price-->
-                                $40.00
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center">
-                                <a class="btn btn-outline-dark mt-auto" href="#">Reservar</a>
-                            </div>
+            
+            <div class="tm-section-2" id="sec-subs">
+                <div class="container">
+                    <div class="row">
+                        <div class="col text-center">
+                            <h2 class="tm-section-title">Quieres ser cliente premium?</h2>
+                            <p class="tm-color-white tm-section-subtitle">Subscribete y accede a los beneficios y
+                                promociones que tenemos para ti </p>
+                            <a href="#" class="tm-color-white tm-btn-white-bordered">Subscribirse</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Footer-->
-    <footer class="py-5 bg-dark">
-        <div class="container">
-            <p class="m-0 text-center text-white">
-                Copyright &copy; Your Website 2022
-            </p>
-        </div>
-    </footer>
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
-</body>
+            
+            <div class="tm-section tm-position-relative">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" class="tm-section-down-arrow">
+                    <polygon fill="#ee5057" points="0,0  100,0  50,60"></polygon>                   
+                </svg> 
+                
+                    <section class="py-5" id="sec-travel">
+                        <div class="container px-4 px-lg-5 mt-5" >
+                            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                                <div class="col mb-5">
+                                    <div class="card h-100">
+                                        <!-- Product image-->
+                                        <img class="card-img-top" src="img/img1.jpg" alt="..." />
+                                        <!-- Product details-->
+                                        <div class="card-body p-4">
+                                            <div class="text-center">
+                                                <!-- Product name-->
+                                                <h5 class="fw-bolder">Colonia, Ur</h5>
+                                                <!-- Product price-->
+                                                $40.00 - $80.00
+                                            </div>
+                                        </div>
+                                        <!-- Product actions-->
+                                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                            <div class="text-center">
+                                                <a class="btn btn-outline-dark mt-auto" href="#">Reservar</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-5">
+                                    <div class="card h-100">
+                                        <!-- Sale badge-->
+                                        <div class="badge bg-dark text-white position-absolute"
+                                            style="top: 0.5rem; right: 0.5rem">
+                                            Agotado
+                                        </div>
+                                        <!-- Product image-->
+                                        <img class="card-img-top" src="img/img2.jpg" alt="..." />
+                                        <!-- Product details-->
+                                        <div class="card-body p-4">
+                                            <div class="text-center">
+                                                <!-- Product name-->
+                                                <h5 class="fw-bolder">Punta del Este, Ur</h5>
+                                                <!-- Product price-->
+                                                <span class="text-muted text-decoration-line-through">$20.00</span>
+                                                $18.00
+                                            </div>
+                                        </div>
+                                        <!-- Product actions-->
+                                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                            <div class="text-center">
+                                                <a class="btn btn-outline-dark mt-auto" href="#">Reservar</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-5">
+                                    <div class="card h-100">
+                                        <!-- Sale badge-->
+                                        <div class="badge bg-dark text-white position-absolute"
+                                            style="top: 0.5rem; right: 0.5rem">
+                                            Agotado
+                                        </div>
+                                        <!-- Product image-->
+                                        <img class="card-img-top" src="img/img3.jpg" alt="..." />
+                                        <!-- Product details-->
+                                        <div class="card-body p-4">
+                                            <div class="text-center">
+                                                <!-- Product name-->
+                                                <h5 class="fw-bolder">Montevideo, Ur</h5>
+                                                <!-- Product price-->
+                                                <span class="text-muted text-decoration-line-through">$50.00</span>
+                                                $25.00
+                                            </div>
+                                        </div>
+                                        <!-- Product actions-->
+                                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                            <div class="text-center">
+                                                <a class="btn btn-outline-dark mt-auto" href="#">Reservar</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-5">
+                                    <div class="card h-100">
+                                        <!-- Product image-->
+                                        <img class="card-img-top" src="img/img4.jpeg" alt="..." />
+                                        <!-- Product details-->
+                                        <div class="card-body p-4">
+                                            <div class="text-center">
+                                                <!-- Product name-->
+                                                <h5 class="fw-bolder">Montevideo, Ur</h5>
+                                                <!-- Product price-->
+                                                $40.00
+                                            </div>
+                                        </div>
+                                        <!-- Product actions-->
+                                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                            <div class="text-center">
+                                                <a class="btn btn-outline-dark mt-auto" href="#">Reservar</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-5">
+                                    <div class="card h-100">
+                                        <!-- Sale badge-->
+                                        <div class="badge bg-dark text-white position-absolute"
+                                            style="top: 0.5rem; right: 0.5rem">
+                                            Agotado
+                                        </div>
+                                        <!-- Product image-->
+                                        <img class="card-img-top" src="img/img5.jpeg" alt="..." />
+                                        <!-- Product details-->
+                                        <div class="card-body p-4">
+                                            <div class="text-center">
+                                                <!-- Product name-->
+                                                <h5 class="fw-bolder">Congreso, Bs As</h5>
+                                                <!-- Product price-->
+                                                <span class="text-muted text-decoration-line-through">$50.00</span>
+                                                $25.00
+                                            </div>
+                                        </div>
+                                        <!-- Product actions-->
+                                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                            <div class="text-center">
+                                                <a class="btn btn-outline-dark mt-auto" href="#">Reservar</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-5">
+                                    <div class="card h-100">
+                                        <!-- Product image-->
+                                        <img class="card-img-top" src="img/img6.jpg" alt="..." />
+                                        <!-- Product details-->
+                                        <div class="card-body p-4">
+                                            <div class="text-center">
+                                                <!-- Product name-->
+                                                <h5 class="fw-bolder">La Boca, Bs As</h5>
+                                                <!-- Product price-->
+                                                $120.00 - $280.00
+                                            </div>
+                                        </div>
+                                        <!-- Product actions-->
+                                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                            <div class="text-center">
+                                                <a class="btn btn-outline-dark mt-auto" href="#">Reservar</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-5">
+                                    <div class="card h-100">
+                                        <!-- Sale badge-->
+                                        <div class="badge bg-dark text-white position-absolute"
+                                            style="top: 0.5rem; right: 0.5rem">
+                                            Agotado
+                                        </div>
+                                        <!-- Product image-->
+                                        <img class="card-img-top" src="img/img7.jpg" alt="..." />
+                                        <!-- Product details-->
+                                        <div class="card-body p-4">
+                                            <div class="text-center">
+                                                <!-- Product name-->
+                                                <h5 class="fw-bolder">BS AS, Arg</h5>
+                                                <!-- Product price-->
+                                                <span class="text-muted text-decoration-line-through">$20.00</span>
+                                                $18.00
+                                            </div>
+                                        </div>
+                                        <!-- Product actions-->
+                                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                            <div class="text-center">
+                                                <a class="btn btn-outline-dark mt-auto" href="#">Reservar</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-5">
+                                    <div class="card h-100">
+                                        <!-- Product image-->
+                                        <img class="card-img-top" src="img/img8.jpg" alt="..." />
+                                        <!-- Product details-->
+                                        <div class="card-body p-4">
+                                            <div class="text-center">
+                                                <!-- Product name-->
+                                                <h5 class="fw-bolder">Puerto Madero, Arg</h5>
+                                                <!-- Product price-->
+                                                $40.00
+                                            </div>
+                                        </div>
+                                        <!-- Product actions-->
+                                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                            <div class="text-center">
+                                                <a class="btn btn-outline-dark mt-auto" href="#">Reservar</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                            
+                        </div>
+                    </section>
+                    </div>        
+                </div>
+            </div>
+            
+            
 
+            
+            
+            <footer class="tm-bg-dark-blue">
+                <div class="container" id="sec-contact">
+                    <div class="row">
+                        <p class="col-sm-12 text-center tm-font-light tm-color-white p-4 tm-margin-b-0">
+                        Copyright &copy; <span class="tm-current-year">2022</span> Buque Al Toque</p>        
+                    </div>
+                </div>                
+            </footer>
+        </div>
+        
+        <!-- load JS files -->
+        <script src="js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
+        <script src="js/popper.min.js"></script>                    <!-- https://popper.js.org/ -->       
+        <script src="js/bootstrap.min.js"></script>                 <!-- https://getbootstrap.com/ -->
+        <script src="js/datepicker.min.js"></script>                <!-- https://github.com/qodesmith/datepicker -->
+        <script src="js/jquery.singlePageNav.min.js"></script>      <!-- Single Page Nav (https://github.com/ChrisWojcik/single-page-nav) -->
+        <script src="slick/slick.min.js"></script>                  <!-- http://kenwheeler.github.io/slick/ -->
+        <script>
+
+            
+
+            function setPageNav(){
+                if($(window).width() > 991) {
+                    $('#tm-top-bar').singlePageNav({
+                        currentClass:'active',
+                        offset: 79
+                    });   
+                }
+                else {
+                    $('#tm-top-bar').singlePageNav({
+                        currentClass:'active',
+                        offset: 65
+                    });   
+                }
+            }
+
+          
+       
+            $(document).ready(function(){
+
+                
+                // Date Picker
+                const pickerCheckIn = datepicker('#inputCheckIn');
+                const pickerCheckOut = datepicker('#inputCheckOut');
+                
+                
+                setPageNav();
+
+                $(window).resize(function() {
+                  
+                  setPageNav();
+                });
+
+                // Close navbar after clicked
+                $('.nav-link').click(function(){
+                    $('#mainNav').removeClass('show');
+                });
+
+                                       
+            });
+
+        </script>             
+
+</body>
 </html>
+
